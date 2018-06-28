@@ -22,6 +22,10 @@
     "babel-eslint": "^8.2.5",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react": "^7.10.0"
   },
+  "main": "index.jsx",
+  "repository": "https://github.com/Syhko/my-pictures.git",
+  "author": "Alexandre Grauby <alexandregrauby@gmail.com>",
+  "license": "MIT"
 }

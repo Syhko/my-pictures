@@ -1,0 +1,90 @@
+.App {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.unSplash {
+  display: flex;
+  align-items: center;
+  width:20%;
+}
+
+.Syhko {
+  display: flex;
+  left: 80%;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: center;
+  width: 60%;
+  font-size: 40px;
+  font-family:'Titillium Web';
+}
+
+.unsplash_credits {
+  font-size: 20px;
+  font-family:'Titillium Web';
+  margin-right: 10px;
+}
+
+.syhko_credits {
+  font-size: 20px;
+  font-family:'Titillium Web';
+  width: 20%;
+  align-self: center;
+}
+
+.invisible_brick {
+  width: 20%;
+}
+
+.App_header {
+  display: flex;
+  justify-content: center;
+}
+
+.form_search {
+  width: 40%;
+  display: flex;
+}
+
+.form_search input {
+  margin: 0 auto;
+  font-family:'Titillium Web';
+  width:20%;
+  height: 40px;
+  border: 0;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background: #b4eca2 url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+  transition: all .5s;
+}
+
+.form_search input:focus {
+  outline:0;
+  width: 80%;
+  background-color: #fff;
+	padding: 9px 10px 9px 32px;
+  transition: all .5s;
+  border: solid 1px #b4eca2;
+}
+
+input[type=search] {
+
+}
+
+@media screen and (max width: 600px) {
+  .form_search input {
+    width:50%;
+  }
+}
+
+.masonry_clear {
+  margin: 0 auto;
+}
+
+.masonry_blur {
+  margin: 0 auto;
+  filter:blur(5px);
+}

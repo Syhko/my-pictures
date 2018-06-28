@@ -1,0 +1,11 @@
+.bigPicture_frame {
+  position: absolute;
+  top:50%;
+  left: 20%;
+  z-index: 1;
+}
+
+.bigPicture {
+  border-radius: 5px;
+  box-shadow: 5px 5px black;
+}

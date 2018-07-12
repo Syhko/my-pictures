@@ -1,11 +1,15 @@
 .bigPicture_frame {
-  position: absolute;
-  top:50%;
-  left: 20%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 
 .bigPicture {
+  margin: 10vh 10vw;
   border-radius: 5px;
   box-shadow: 5px 5px black;
+  max-height: 80vh;
+  max-width: 80vw;
 }

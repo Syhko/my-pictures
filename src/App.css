@@ -9,10 +9,10 @@
   .logo_Syhko {
     display: none;
   }
-  .unsplash_credits {
+  .unSplashCredits {
     font-size: 13px;
   }
-  .syhko_credits {
+  .syhkoCredits {
     font-size: 13px;
   }
   .title {
@@ -26,10 +26,10 @@
     width:30%;
     height: 40px;
   }
-  .unsplash_credits {
+  .unSplashCredits {
     font-size: 18px;
   }
-  .syhko_credits {
+  .syhkoCredits {
     font-size: 18px;
   }
   .title {
@@ -39,6 +39,11 @@
 
 .App {
   margin: 0 auto;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 .unSplash {
@@ -61,15 +66,23 @@
   font-family:'Titillium Web';
 }
 
-.unsplash_credits {
+.unSplashCredits {
   font-family:'Titillium Web';
   margin-right: 10px;
 }
 
-.syhko_credits {
+.unSplashLink:hover {
+  font-size: 20px;
+}
+
+.syhkoCredits {
   font-family:'Titillium Web';
   width: 20%;
   align-self: center;
+}
+
+.syhkoLink:hover {
+  font-size: 20px;
 }
 
 .invisible_brick {

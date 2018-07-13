@@ -88,12 +88,22 @@ closeBigPicture = () => {
 
       <div className="App">
         <div className="unSplash">
-          <p className="unsplash_credits">Powered by <span style={{ fontWeight: 'bold' }}>Unsplash</span></p><img className="logo_Unsplash" src={logo_Unsplash} alt="logo_Unsplash"/>
+          <p className="unSplashCredits">Powered by
+            <span className="unSplashLink" style={{ fontWeight: 'bold' }}>
+              <a href="https://unsplash.com/" target="_blank"> Unsplash</a>
+            </span>
+          </p>
+          <img className="logo_Unsplash" src={logo_Unsplash} alt="logo_Unsplash"/>
         </div>
         <div className="Syhko">
           <div className="invisible_brick"></div>
           <p className="title"><span style={{ fontWeight: 'bold' }}>REACT GALLERY</span></p>
-          <p className="syhko_credits">Made by <span style={{ fontWeight: 'bold' }}>Syhko</span><img className="logo_Syhko" src={logo_Syhko} alt="logo_Syhko"/></p>
+          <p className="syhkoCredits">Made by
+            <span className="syhkoLink" style={{ fontWeight: 'bold' }}>
+              <a href="https://github.com/Syhko" target="_blank"> Syhko</a>
+            </span>
+            <img className="logo_Syhko" src={logo_Syhko} alt="logo_Syhko"/>
+          </p>
         </div>
         <header className="App_header">
           <form className="form_search" onSubmit={this.updateGallery}>

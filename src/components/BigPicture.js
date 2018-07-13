@@ -1,14 +1,17 @@
-//REACT
+// REACT
 import React from 'react';
-//STYLE
+// STYLE
 import './BigPicture.css';
 
-function BigPicture(props) {
-    return (
+const BigPicture = ({
+  id,
+  handleClick,
+  imageUrl
+}) => (
       <div className="bigPicture_frame">
-        <img className="bigPicture" src={props.imageUrl} alt="img" onClick={() => props.handleClick(props.id)}/>
+        <img className="bigPicture" src={imageUrl} alt="img" onClick={() => handleClick(id)}/>
       </div>
-    );
-}
+    )
+
 
 export default BigPicture;

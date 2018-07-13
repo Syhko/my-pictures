@@ -15,6 +15,10 @@ import BigPicture from './components/BigPicture';
 const masonryOptions = {  transitionDuration : '1.5s', columnWidth : 1, fitWidth : true };
 const imagesLoadedOptions = { background : '.masonry_brick' };
 
+// CONSTANTS
+const API_KEY = "cafb670b38fe81cc5594269814c73f25c82530482a9377485f9fcffdd17fea8f";
+const BASE_API_PATH = "https://api.unsplash.com";
+
 class App extends React.Component {
 
   state = {
@@ -27,7 +31,7 @@ class App extends React.Component {
 
 //First API request to fill the page before any research
   componentDidMount() {
-    fetch('https://api.unsplash.com/photos/?client_id=cafb670b38fe81cc5594269814c73f25c82530482a9377485f9fcffdd17fea8f&per_page=50')
+    fetch(`${BASE_API_PATH}/photos/?client_id=${API_KEY}&per_page=50`)
     .then(response => response.json())
     .then((data) => {
       console.log(data);
@@ -41,7 +45,7 @@ class App extends React.Component {
  searchImages = () => {
   const currentComponent = this;
 
-  return fetch(`https://api.unsplash.com/photos/search?client_id=cafb670b38fe81cc5594269814c73f25c82530482a9377485f9fcffdd17fea8f&query=${this.state.search}&per_page=50`)
+  return fetch(`${BASE_API_PATH}/photos/search?client_id=${API_KEY}&query=${this.state.search}&per_page=50`)
   .then(response => response.json())
   .then((data) => {
     let urlsSmall = data.map(data => data.urls).map(urls => urls.small)

@@ -1,4 +1,4 @@
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 400px) {
   .masonry_brick {
     max-width: 100px;
   }

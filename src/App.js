@@ -12,7 +12,7 @@ import Picture from './components/Picture';
 import BigPicture from './components/BigPicture';
 
 //MASONRY OPTIONS
-const masonryOptions = {  transitionDuration : '1s', columnWidth : 17, fitWidth : true };
+const masonryOptions = {  transitionDuration : '1.5s', columnWidth : 1, fitWidth : true };
 const imagesLoadedOptions = { background : '.masonry_brick' };
 
 class App extends React.Component {
@@ -27,7 +27,7 @@ class App extends React.Component {
 
 //First API request to fill the page before any research
   componentDidMount() {
-    fetch('https://api.unsplash.com/photos/?client_id=cafb670b38fe81cc5594269814c73f25c82530482a9377485f9fcffdd17fea8f&per_page=25')
+    fetch('https://api.unsplash.com/photos/?client_id=cafb670b38fe81cc5594269814c73f25c82530482a9377485f9fcffdd17fea8f&per_page=50')
     .then(response => response.json())
     .then((data) => {
       console.log(data);
@@ -41,7 +41,7 @@ class App extends React.Component {
  searchImages = () => {
   const currentComponent = this;
 
-  return fetch(`https://api.unsplash.com/photos/search?client_id=cafb670b38fe81cc5594269814c73f25c82530482a9377485f9fcffdd17fea8f&query=${this.state.search}&per_page=25`)
+  return fetch(`https://api.unsplash.com/photos/search?client_id=cafb670b38fe81cc5594269814c73f25c82530482a9377485f9fcffdd17fea8f&query=${this.state.search}&per_page=50`)
   .then(response => response.json())
   .then((data) => {
     let urlsSmall = data.map(data => data.urls).map(urls => urls.small)
@@ -80,7 +80,7 @@ closeBigPicture = () => {
     const { urlsSmall, urlsRegular, showBigPicture, selectedRegular } = this.state;
 
     const images = Object.keys(urlsSmall).map(key =>
-      <CSSTransition key={key} classNames="transition" timeout={1000}>
+      <CSSTransition key={key} classNames="fade" timeout={1000}>
         <Picture id={key} key={key} imageUrl={urlsSmall[key]} handleClick={this.bigPictureClick}/>
       </CSSTransition> )
 
@@ -88,7 +88,7 @@ closeBigPicture = () => {
 
       <div className="App">
         <div className="unSplash">
-          <p className="unsplash_credits">Powered by <span style={{ fontWeight: 'bold' }}>Unsplash</span></p><img src={logo_Unsplash} alt="logo_Unsplash"/>
+          <p className="unsplash_credits">Powered by <span style={{ fontWeight: 'bold' }}>Unsplash</span></p><img className="logo_Unsplash" src={logo_Unsplash} alt="logo_Unsplash"/>
         </div>
         <div className="Syhko">
           <div className="invisible_brick"></div>
@@ -115,7 +115,11 @@ closeBigPicture = () => {
           imagesLoadOptions={imagesLoadedOptions}>
             {images}
         </Masonry>
-          {showBigPicture ? <BigPicture imageUrl={selectedRegular} handleClick={this.closeBigPicture}/> : null}
+        <CSSTransition in={showBigPicture === true} out={showBigPicture === false} timeout={1000} classNames="fade">
+          <React.Fragment>
+            {showBigPicture ? <BigPicture imageUrl={selectedRegular} handleClick={this.closeBigPicture}/> : null}
+          </React.Fragment>
+      </CSSTransition>
       </div>
     );
   }

@@ -1,13 +1,38 @@
+@media screen and (min-width: 400px) {
+  .masonry_brick {
+    max-width: 100px;
+  }
+  .picture {
+    max-width: 100px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 900px){
+  .masonry_brick {
+    max-width: 150px;
+  }
+  .picture {
+    max-width: 150px;
+  }
+}
+
+@media screen and (min-width: 900px){
+  .masonry_brick {
+    max-width: 250px;
+  }
+  .picture {
+    max-width: 250px;
+  }
+}
+
 .masonry_brick {
-  flex:auto;
   margin: 0 8px 8px 0;
+  height: auto;
 }
 
 .picture {
   border-radius: 8px;
-}
-
-@media screen and (max width: 600px) {
+  height: auto;
 }
 
 .picture:hover {

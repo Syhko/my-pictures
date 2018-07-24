@@ -1,17 +1,17 @@
-//REACT
+// REACT
 import React from 'react';
-//PACKAGES
+// PACKAGES
 import Masonry from 'react-masonry-component';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-//STYLE & PICTURES
+// STYLE & PICTURES
 import './App.css';
 import logo_Syhko from './logo_Syhko.png';
 import logo_Unsplash from './logo_Unsplash.png';
-//COMPONENTS
+// COMPONENTS
 import Picture from './components/Picture';
 import BigPicture from './components/BigPicture';
 
-//MASONRY OPTIONS
+// MASONRY OPTIONS
 const masonryOptions = {  transitionDuration : '1.5s', columnWidth : 1, fitWidth : true };
 const imagesLoadedOptions = { background : '.masonry_brick' };
 
